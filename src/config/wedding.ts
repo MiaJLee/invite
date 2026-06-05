@@ -65,8 +65,7 @@ export const weddingConfig: WeddingConfig = {
 축복해 주시면 감사하겠습니다.`,
 
 	// ── 화환 사양 ──────────────────────────────────
-	flowerDeclineMessage:
-		'축하의 마음만 감사히 받겠습니다.\n화환 대신 따뜻한 마음을 전해주시면\n더없이 행복하겠습니다.',
+	flowerDeclineMessage: '축하 화환은 정중히 사양합니다.\n축하의 마음만 감사히 받겠습니다.',
 
 	// ── 갤러리 ──────────────────────────────────────
 	gallery: [
@@ -130,20 +129,20 @@ export const weddingConfig: WeddingConfig = {
 				{
 					role: '신랑',
 					bank: '국민은행',
-					accountNumber: '123-456-789012',
+					accountNumber: '110-436-921227',
 					holder: '박종혁',
 					kakaoPayUrl: 'https://link.kakaopay.com/__/8ZccKtD',
 				},
 				{
 					role: '신랑 아버지',
 					bank: '신한은행',
-					accountNumber: '110-123-456789',
+					accountNumber: '336-044-48812',
 					holder: '박상배',
 				},
 				{
 					role: '신랑 어머니',
-					bank: '우리은행',
-					accountNumber: '1002-123-456789',
+					bank: '신한은행',
+					accountNumber: '110-025-291791',
 					holder: '장미영',
 				},
 			],
@@ -155,20 +154,20 @@ export const weddingConfig: WeddingConfig = {
 				{
 					role: '신부',
 					bank: '카카오뱅크',
-					accountNumber: '3333-12-3456789',
+					accountNumber: '3333-07-3750221',
 					holder: '이지형',
 					kakaoPayUrl: 'https://link.kakaopay.com/__/tui-OtJ',
 				},
 				{
 					role: '신부 아버지',
-					bank: '하나은행',
-					accountNumber: '123-456789-12345',
+					bank: '국민은행',
+					accountNumber: '006-21-0815-491',
 					holder: '이근재',
 				},
 				{
 					role: '신부 어머니',
-					bank: '농협',
-					accountNumber: '302-1234-5678-91',
+					bank: '하나은행',
+					accountNumber: '469-910035-89507',
 					holder: '이미승',
 				},
 			],
