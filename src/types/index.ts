@@ -95,6 +95,23 @@ export interface Labels {
 	accountCopy: string
 	accountSend: string
 
+	// 방명록
+	guestbookTitle: string
+	guestbookSubtitle: string
+	guestbookNameLabel: string
+	guestbookNamePlaceholder: string
+	guestbookMessageLabel: string
+	guestbookMessagePlaceholder: string
+	guestbookSubmit: string
+	guestbookSubmitting: string
+	guestbookEmpty: string
+	guestbookLoading: string
+	guestbookLoadError: string
+	guestbookError: string
+	guestbookThankYou: string
+	guestbookShowAll: string
+	guestbookShowLess: string
+
 	// 참석여부
 	rsvpTitle: string
 	rsvpSubtitle: string
@@ -129,6 +146,7 @@ export interface Labels {
 		gallery: string
 		transport: string
 		account: string
+		guestbook: string
 		rsvp: string
 		share: string
 	}
@@ -161,11 +179,15 @@ export interface WeddingConfig {
 
 	googleScriptUrl: string
 
+	/** 방명록 저장/조회용 Google Apps Script 웹앱 URL (미설정 시 방명록 섹션 숨김) */
+	guestbookScriptUrl?: string
+
 	labels: Labels
 
 	/** 섹션 표시 여부 */
 	showAccount?: boolean
 	showFlowerDecline?: boolean
+	showGuestbook?: boolean
 
 	/** 영문용 Google Maps embed URL (설정 시 카카오맵 대신 표시) */
 	googleMapsEmbedUrl?: string

@@ -11,7 +11,7 @@ export const weddingConfig: WeddingConfig = {
 		firstName: '종혁',
 		fatherName: '박상배',
 		motherName: '장미영',
-		relation: '의 장남',
+		relation: '의 아들',
 		childhoodPhoto: '/images/groom-baby.webp',
 		birthInfo: '1996년 2월 서울 출생',
 		description: '감성파 과학소년 🧪',
@@ -26,7 +26,7 @@ export const weddingConfig: WeddingConfig = {
 		firstName: '지형',
 		fatherName: '이근재',
 		motherName: '이미승',
-		relation: '의 장녀',
+		relation: '의 딸',
 		childhoodPhoto: '/images/bride-baby.webp',
 		birthInfo: '1995년 8월 부산 출생',
 		description: '호기심 많은 장난꾸러기 🎈',
@@ -180,6 +180,12 @@ export const weddingConfig: WeddingConfig = {
 	// ── RSVP (Google Forms) ──────────────────
 	googleScriptUrl:
 		'https://docs.google.com/forms/d/e/1FAIpQLSdBkOa9oxfooMzLHIOll-bRI5mIzFYHYiDob8WYTIQhg7ICLg/formResponse',
+
+	// ── 방명록 (Google Apps Script 웹앱) ──────────────────
+	// scripts/guestbook-apps-script.gs 를 배포한 뒤 발급되는 /exec URL 을 넣어주세요.
+	// 비워두면 방명록 섹션이 자동으로 숨겨집니다.
+	guestbookScriptUrl:
+		'https://script.google.com/macros/s/AKfycbwMAcSowkH0U-M6_k9z8rPIfeAWR5_pSBW35hcNi_kahhIPtz3VIQUYrtNoF1Ezpjxu/exec',
 
 	// ── 공유 설정 ──────────────────────────────────
 	ogImage: '/images/main-og.jpg',
