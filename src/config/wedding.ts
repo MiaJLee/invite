@@ -189,6 +189,6 @@ export const weddingConfig: WeddingConfig = {
 
 	// ── 공유 설정 ──────────────────────────────────
 	ogImage: '/images/main-og.jpg',
-	siteUrl: 'https://miajlee.github.io/mna',
+	siteUrl: 'https://miajlee.github.io/invite',
 	coupleNameShort: '지형 ♥ 종혁',
 }

@@ -14,7 +14,7 @@ const amsterdam = localFont({
 const weddingDateStr = formatFull(parseWeddingDate(weddingConfig.datetime), 'ko')
 
 export const metadata: Metadata = {
-	metadataBase: new URL(weddingConfig.siteUrl || 'https://example.github.io/mna'),
+	metadataBase: new URL(weddingConfig.siteUrl || 'https://example.github.io/invite'),
 	title: `${weddingConfig.bride.firstName} ♥ ${weddingConfig.groom.firstName} 결혼합니다`,
 	description: `${weddingDateStr} | ${weddingConfig.venue.name} ${weddingConfig.venue.hall}`,
 	openGraph: {

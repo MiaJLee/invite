@@ -25,7 +25,7 @@ export default function LanguageToggleButton({
 			next.set('lang', 'en')
 		}
 		const q = next.toString()
-		// usePathname()은 basePath 제외 — router.replace가 /mna를 다시 붙이므로 중복 방지
+		// usePathname()은 basePath 제외 — router.replace가 basePath를 다시 붙이므로 중복 방지
 		const path = pathname || '/'
 		router.replace(q ? `${path}?${q}` : path, { scroll: false })
 	}, [isEn, pathname, router, searchParams])
