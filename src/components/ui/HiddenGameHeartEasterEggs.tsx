@@ -90,9 +90,12 @@ export default function HiddenGameHeartEasterEggs({ locale }: { locale: Locale }
 	return (
 		<>
 			<style>{`
-				@keyframes hidden-game-heart-bob {
-					0%, 100% { transform: translate(-50%, -50%) translateY(0); }
-					50% { transform: translate(-50%, -50%) translateY(-4px); }
+				@keyframes hidden-game-heart-beat {
+					0%, 100% { transform: translate(-50%, -50%) scale(1); }
+					15% { transform: translate(-50%, -50%) scale(1.22); }
+					30% { transform: translate(-50%, -50%) scale(1); }
+					45% { transform: translate(-50%, -50%) scale(1.13); }
+					60% { transform: translate(-50%, -50%) scale(1); }
 				}
 			`}</style>
 			{spots.map((spot, i) => (
@@ -100,11 +103,11 @@ export default function HiddenGameHeartEasterEggs({ locale }: { locale: Locale }
 					key={i}
 					type="button"
 					onClick={goGame}
-					className="pointer-events-auto absolute z-[18] opacity-[0.38] transition-opacity duration-300 hover:opacity-95 focus:opacity-95 focus:outline-none focus-visible:ring-2 focus-visible:ring-pink-300/80 focus-visible:ring-offset-2 focus-visible:ring-offset-cream"
+					className="pointer-events-auto absolute z-[18] cursor-pointer opacity-[0.38] transition-opacity duration-300 hover:opacity-95 focus:opacity-95 focus:outline-none focus-visible:ring-2 focus-visible:ring-pink-300/80 focus-visible:ring-offset-2 focus-visible:ring-offset-cream"
 					style={{
 						top: `${spot.top}%`,
 						left: `${spot.left}%`,
-						animation: 'hidden-game-heart-bob 2.8s ease-in-out infinite',
+						animation: 'hidden-game-heart-beat 1.6s ease-in-out infinite',
 						animationDelay: `${i * 0.4}s`,
 					}}
 					aria-label={ariaLabel}
