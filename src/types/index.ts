@@ -193,6 +193,7 @@ export interface WeddingConfig {
 	googleMapsEmbedUrl?: string
 
 	ogImage: string
+	shareImage: string
 	siteUrl: string
 	coupleNameShort: string
 }

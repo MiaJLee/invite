@@ -18,16 +18,17 @@ export default function ShareSection({ config }: { config: WeddingConfig }) {
 
 	const handleKakaoShare = () => {
 		shareKakao({
-			title: config.labels.locale === 'en'
-				? `Save the Date\n${config.bride.firstName} ♥ ${config.groom.firstName}`
-				: `${config.bride.firstName} ♥ ${config.groom.firstName} ${config.labels.shareMarrying}`,
+			title:
+				config.labels.locale === 'en'
+					? `Save the Date\n${config.bride.firstName} ♥ ${config.groom.firstName}`
+					: `${config.bride.firstName} ♥ ${config.groom.firstName} ${config.labels.shareMarrying}`,
 			description:
 				formatShort(parseWeddingDate(config.datetime), config.labels.locale) +
 				'\n' +
 				config.venue.name +
 				' ' +
 				config.venue.hall,
-			imageUrl: config.siteUrl + config.ogImage,
+			imageUrl: config.siteUrl + config.shareImage,
 			webUrl: config.labels.locale === 'en' ? config.siteUrl + '?lang=en' : config.siteUrl,
 			buttonLabel: config.labels.locale === 'en' ? 'View Invitation' : '모바일 청첩장 보기',
 		})
@@ -55,9 +56,7 @@ export default function ShareSection({ config }: { config: WeddingConfig }) {
 		const shareData = {
 			title: `${config.groom.name} ♥ ${config.bride.name} ${config.labels.shareInvite}`,
 			text:
-				formatFull(parseWeddingDate(config.datetime), config.labels.locale) +
-				' | ' +
-				config.venue.name,
+				formatFull(parseWeddingDate(config.datetime), config.labels.locale) + ' | ' + config.venue.name,
 			url: shareUrl,
 		}
 
@@ -68,7 +67,8 @@ export default function ShareSection({ config }: { config: WeddingConfig }) {
 				return
 			} catch (err: unknown) {
 				// 사용자가 시트를 닫은 경우에는 fallback 하지 않음
-				const name = err && typeof err === 'object' && 'name' in err ? String((err as { name: string }).name) : ''
+				const name =
+					err && typeof err === 'object' && 'name' in err ? String((err as { name: string }).name) : ''
 				if (name === 'AbortError') return
 				// 그 외 실패 → 아래 fallback
 			}
