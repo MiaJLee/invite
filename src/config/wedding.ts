@@ -130,7 +130,7 @@ export const weddingConfig: WeddingConfig = {
 			accounts: [
 				{
 					role: '신랑',
-					bank: '국민은행',
+					bank: '신한은행',
 					accountNumber: '110-436-921227',
 					holder: '박종혁',
 					kakaoPayUrl: 'https://link.kakaopay.com/__/8ZccKtD',
