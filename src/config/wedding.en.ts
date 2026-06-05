@@ -27,7 +27,7 @@ export const weddingConfigEn: WeddingConfig = {
 		firstName: 'Mia',
 		relation: "'s Daughter",
 		birthInfo: 'Born Aug 1995, Busan',
-		description: 'Curious little troublemaker 🎈',
+		description: 'Curious little adventurer 🎈',
 		mbti: 'ESFJ \nFriendly Consul',
 		childhoodDream: 'CEO, Designer',
 		favoriteThings: ['Travel', 'Cooking', 'Reading'],
@@ -46,13 +46,17 @@ export const weddingConfigEn: WeddingConfig = {
 		},
 	],
 
-	greeting: `The love we have built together,
-we now wish to carry forward
-as we walk side by side.
+	greeting: `After a successful trial period,
 
-We would be truly grateful
-if you could bless us
-as we begin this journey together.`,
+we've decided to commit
+to the lifetime plan.
+
+Unlimited laughter,
+shared adventures,
+and no cancellation policy.
+
+We would be honored to celebrate
+the beginning of forever with you.`,
 
 	flowerDeclineMessage:
 		'Your warm wishes are the greatest gift.\nIn lieu of flowers, please share your heartfelt congratulations.',
@@ -63,8 +67,8 @@ as we begin this journey together.`,
 			title: 'Metro',
 			details: [
 				'Line 4, Hyehwa Station Exit ④',
-				'Shuttle bus at Exit ④ (Baskin Robbins)',
-				'Village Bus 7 (Exit ① · Sungkyunkwan Univ. stop)',
+				'Shuttle bus runs frequently at Exit ④ (T Store)',
+				'Village Bus 7 (Exit ① · Sungkyunkwan Univ. main gate stop)',
 				'10 min walk from station',
 			],
 		},
@@ -73,22 +77,22 @@ as we begin this journey together.`,
 			title: 'Bus',
 			details: [
 				'Stop: Myeongnyun 3-ga, Seongdae Entrance',
-				'Main lines: 102, 104, 106, 107, 108, 109, 140, 143, 149, 150, 151, 160, 171, 172, 272, 301, 601',
-				'Branch: 2112 / Airport: 6011 / Village: 7',
+				'Main lines: 100, 102, 104, 107, 140, 143, 149, 150, 151, 160, 162, 171, 172, 272, 301, 710',
+				'Branch: 8101, 8111 / Express: 1101, 7101',
 			],
 		},
 		{
 			type: 'car',
 			title: 'GPS',
-			details: ['Search "Sungkyunkwan University" or "성균관"'],
+			details: ['Search "Sungkyunkwan Convention Wedding Hall"'],
 		},
 		{
 			type: 'parking',
 			title: 'Parking',
 			details: [
-				'Parking Lot #1 inside Sungkyunkwan Univ. main gate',
+				'Main building lot, Parking Lot #1, or Sungkyunkwan Univ. lot',
+				'(2 hours free for wedding guests)',
 				'Follow parking attendant instructions',
-				'Please turn on hazard lights while parked',
 			],
 		},
 	],
