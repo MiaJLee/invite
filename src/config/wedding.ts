@@ -90,12 +90,7 @@ export const weddingConfig: WeddingConfig = {
 		{
 			type: 'metro',
 			title: '지하철',
-			details: [
-				'4호선 혜화역 하차 ④번출구',
-				'④번 출구 T스토어 앞 셔틀버스 수시운행',
-				'마을버스 7번 (혜화역 ①번출구 · 성대정문 앞 하차)',
-				'도보 이용시 10분거리',
-			],
+			details: ['4호선 혜화역 4번출구 T스토어 앞 셔틀버스 수시운행', '도보 이용시 10분거리'],
 		},
 		{
 			type: 'bus',
