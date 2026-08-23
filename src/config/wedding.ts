@@ -1,8 +1,10 @@
 import type { WeddingConfig } from '@/types'
 import { labelsKo } from './labels.ko'
+import { wikiKo } from './wiki.ko'
 
 export const weddingConfig: WeddingConfig = {
 	labels: labelsKo,
+	wiki: wikiKo,
 	// ── 신랑 신부 정보 ──────────────────────────────
 	groom: {
 		role: '신랑',

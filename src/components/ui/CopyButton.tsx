@@ -6,9 +6,10 @@ import Toast from "./Toast";
 interface CopyButtonProps {
   text: string;
   label?: string;
+  className?: string;
 }
 
-export default function CopyButton({ text, label = "복사" }: CopyButtonProps) {
+export default function CopyButton({ text, label = "복사", className }: CopyButtonProps) {
   const [showToast, setShowToast] = useState(false);
 
   const handleCopy = useCallback(async () => {
@@ -31,7 +32,7 @@ export default function CopyButton({ text, label = "복사" }: CopyButtonProps) 
     <>
       <button
         onClick={handleCopy}
-        className="px-3 py-1.5 text-xs bg-sage-100 text-sage-700 rounded-lg hover:bg-sage-200 transition-colors"
+        className={`px-3 py-1.5 bg-sage-100 text-sage-700 rounded-lg hover:bg-sage-200 transition-colors ${className ?? "text-xs"}`}
       >
         {label}
       </button>

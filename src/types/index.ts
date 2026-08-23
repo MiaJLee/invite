@@ -15,6 +15,34 @@ export interface Person {
 	favoriteThings?: string[]
 }
 
+export type WikiSlug = 'groom' | 'bride'
+
+export interface WikiInfoboxRow {
+	label: string
+	value: string
+	header?: boolean
+}
+
+export interface WikiSection {
+	id: string
+	title: string
+	body: string
+}
+
+export interface PersonWiki {
+	slug: WikiSlug
+	title: string
+	englishName?: string
+	lastModified: string
+	categories: string[]
+	photo: string
+	photoCaption?: string
+	infoboxTitle: string
+	infobox: WikiInfoboxRow[]
+	sections: WikiSection[]
+	templateNote?: string
+}
+
 export interface WeddingVenue {
 	name: string
 	hall: string
@@ -77,6 +105,7 @@ export interface Labels {
 	profileMbti: string
 	profileChildhoodDream: string
 	profileFavoriteThings: string
+	profileDetailLink: string
 
 	// 캘린더
 	countdownLabels: { days: string; hours: string; min: string; sec: string }
@@ -161,6 +190,10 @@ export interface Labels {
 export interface WeddingConfig {
 	groom: Person
 	bride: Person
+	wiki?: {
+		groom: PersonWiki
+		bride: PersonWiki
+	}
 
 	datetime: string
 	venue: WeddingVenue

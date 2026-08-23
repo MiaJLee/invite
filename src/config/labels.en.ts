@@ -19,6 +19,7 @@ export const labelsEn: Labels = {
 	profileMbti: 'MBTI',
 	profileChildhoodDream: 'Childhood dream',
 	profileFavoriteThings: 'Loves',
+	profileDetailLink: 'Profile',
 
 	countdownLabels: { days: 'Days', hours: 'Hours', min: 'Min', sec: 'Sec' },
 	googleCalendar: '📅 add to Google Calendar',

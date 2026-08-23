@@ -19,6 +19,7 @@ export const labelsKo: Labels = {
 	profileMbti: 'MBTI',
 	profileChildhoodDream: '어린 시절 꿈',
 	profileFavoriteThings: '좋아하는 것',
+	profileDetailLink: '인물상세',
 
 	countdownLabels: { days: 'Days', hours: 'Hours', min: 'Min', sec: 'Sec' },
 	googleCalendar: '📅 Google 캘린더에 추가하기',

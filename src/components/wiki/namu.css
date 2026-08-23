@@ -1,0 +1,730 @@
+.namu-root {
+	--namu-brand: #00a495;
+	--namu-brand-dark: #008275;
+	--namu-link: #0275a9;
+	--namu-text: #373a3c;
+	--namu-muted: #555;
+	--namu-border: #ccc;
+	--namu-border-soft: #ddd;
+	--namu-bg: #f5f5f5;
+	--namu-paper: #fff;
+	--namu-toc: #f8f9fa;
+	--namu-template: #d6f0eb;
+	--namu-category: #f4f4f4;
+	--namu-font: "Noto Sans KR", "Apple SD Gothic Neo", "Malgun Gothic", sans-serif;
+
+	min-height: 100vh;
+	background: var(--namu-bg);
+	color: var(--namu-text);
+	font-family: var(--namu-font);
+	font-size: 16px;
+	line-height: 1.8;
+	-webkit-font-smoothing: antialiased;
+}
+
+html:has(.namu-root) {
+	scrollbar-width: thin;
+	scrollbar-color: #bbb #eee;
+}
+
+html:has(.namu-root)::-webkit-scrollbar {
+	width: 10px;
+	background: #eee;
+}
+
+html:has(.namu-root)::-webkit-scrollbar-thumb {
+	background: #bbb;
+}
+
+html:has(.namu-root) body {
+	background: var(--namu-bg);
+	color: var(--namu-text);
+}
+
+/* ── header (espejo) ─────────────────────────────── */
+.namu-header {
+	position: sticky;
+	top: 0;
+	z-index: 30;
+}
+
+.namu-topbar {
+	background: #00a69c;
+	color: #fff;
+	height: 48px;
+}
+
+.namu-topbar-inner {
+	display: flex;
+	align-items: center;
+	gap: 16px;
+	height: 48px;
+	padding: 8px 16px;
+	max-width: 1280px;
+	margin: 0 auto;
+}
+
+.namu-logo {
+	display: inline-flex;
+	align-items: center;
+	gap: 8px;
+	color: #fff;
+	text-decoration: none;
+	font-weight: 700;
+	font-size: 18px;
+	letter-spacing: -0.03em;
+	flex-shrink: 0;
+	line-height: 1;
+}
+
+.namu-logo:hover {
+	color: #fff;
+	opacity: 0.92;
+}
+
+.namu-logo-mark {
+	width: 28px;
+	height: 28px;
+	display: block;
+}
+
+.namu-top-links {
+	display: flex;
+	align-items: center;
+	gap: 4px;
+	min-width: 0;
+}
+
+.namu-top-link {
+	display: inline-flex;
+	align-items: center;
+	gap: 6px;
+	color: #fff;
+	font-size: 14px;
+	padding: 6px 8px;
+	white-space: nowrap;
+	text-decoration: none;
+	border: 0;
+	background: transparent;
+	cursor: default;
+}
+
+.namu-top-link.is-button {
+	cursor: pointer;
+	font: inherit;
+}
+
+.namu-top-link svg {
+	width: 18px;
+	height: 18px;
+	display: block;
+	flex-shrink: 0;
+}
+
+.namu-caret {
+	font-size: 10px;
+	opacity: 0.85;
+}
+
+.namu-special {
+	position: relative;
+}
+
+.namu-special-menu {
+	position: absolute;
+	top: calc(100% + 4px);
+	left: 0;
+	min-width: 140px;
+	background: #fff;
+	border: 1px solid #ccc;
+	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+	padding: 4px 0;
+	z-index: 40;
+}
+
+.namu-special-menu a {
+	display: block;
+	padding: 8px 14px;
+	color: #373a3c;
+	text-decoration: none;
+	font-size: 14px;
+}
+
+.namu-special-menu a:hover {
+	background: #f3f6fa;
+}
+
+.namu-top-end {
+	display: flex;
+	align-items: center;
+	gap: 4px;
+	margin-left: auto;
+}
+
+.namu-icon-btn {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	width: 32px;
+	height: 32px;
+	color: #fff;
+}
+
+.namu-icon-btn svg {
+	width: 20px;
+	height: 20px;
+}
+
+.namu-searchbar {
+	display: flex;
+	align-items: stretch;
+	background: #fff;
+	border-bottom: 1px solid #ccc;
+	height: 40px;
+}
+
+.namu-random-btn {
+	width: 40px;
+	border: 0;
+	background: transparent;
+	color: #555;
+	cursor: pointer;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	flex-shrink: 0;
+}
+
+.namu-random-btn svg {
+	width: 20px;
+	height: 20px;
+}
+
+.namu-random-btn:hover {
+	background: #f4f4f4;
+}
+
+.namu-search {
+	flex: 1;
+	display: flex;
+	align-items: stretch;
+	min-width: 0;
+	background: #fff;
+}
+
+.namu-search input {
+	flex: 1;
+	min-width: 0;
+	border: 0;
+	padding: 0 0 0 12px;
+	font: inherit;
+	font-size: 15px;
+	color: #212529;
+	outline: none;
+	background: transparent;
+}
+
+.namu-search input::placeholder {
+	color: #8a8a8a;
+}
+
+.namu-search-icon {
+	width: 32px;
+	border: 0;
+	background: transparent;
+	color: #555;
+	cursor: pointer;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	flex-shrink: 0;
+}
+
+.namu-search-icon svg {
+	width: 20px;
+	height: 20px;
+}
+
+.namu-search-icon:hover {
+	color: #00a69c;
+}
+
+/* ── article shell ──────────────────────────────── */
+.namu-shell {
+	max-width: 1100px;
+	margin: 0 auto;
+	padding: 12px 16px 48px;
+}
+
+.namu-article {
+	background: var(--namu-paper);
+	border: 1px solid #e3e3e3;
+	padding: 18px 22px 36px;
+	overflow: hidden;
+}
+
+.namu-article-meta {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	gap: 12px;
+	font-size: 12px;
+	color: #888;
+	margin-bottom: 4px;
+}
+
+.namu-article-tools {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 2px 8px;
+}
+
+.namu-article-tools span,
+.namu-article-tools a {
+	color: #888;
+	text-decoration: none;
+	cursor: default;
+}
+
+.namu-article-tools a:hover {
+	color: var(--namu-link);
+}
+
+.namu-title {
+	margin: 0 0 8px;
+	font-size: 2rem;
+	font-weight: 700;
+	line-height: 1.3;
+	letter-spacing: -0.03em;
+	color: #111;
+}
+
+.namu-title-en {
+	display: block;
+	margin-top: 2px;
+	font-size: 0.85rem;
+	font-weight: 500;
+	letter-spacing: 0.02em;
+	color: #666;
+}
+
+/* ── category ───────────────────────────────────── */
+.namu-category {
+	border: 1px solid var(--namu-border);
+	background: var(--namu-category);
+	padding: 7px 12px;
+	margin: 10px 0 14px;
+	font-size: 13px;
+	clear: both;
+}
+
+.namu-category-label {
+	font-weight: 700;
+	margin-right: 6px;
+}
+
+.namu-category-sep {
+	color: #999;
+	margin: 0 4px;
+}
+
+/* ── template 틀 ────────────────────────────────── */
+.namu-template {
+	border: 1px solid var(--namu-brand);
+	background: var(--namu-template);
+	padding: 10px 14px;
+	margin: 0 0 16px;
+	font-size: 14px;
+	clear: both;
+}
+
+.namu-template-title {
+	font-weight: 700;
+	color: var(--namu-brand-dark);
+	margin-right: 6px;
+}
+
+/* ── infobox ────────────────────────────────────── */
+.namu-infobox {
+	float: right;
+	width: 270px;
+	margin: 0 0 16px 18px;
+	border-collapse: collapse;
+	border: 2px solid var(--namu-border-soft);
+	background: #f9f9f9;
+	font-size: 13px;
+	line-height: 1.55;
+}
+
+.namu-infobox caption,
+.namu-infobox-head {
+	background: var(--namu-brand);
+	color: #fff;
+	font-size: 18px;
+	font-weight: 700;
+	text-align: center;
+	padding: 8px 6px;
+}
+
+.namu-infobox-en {
+	display: block;
+	margin-top: 2px;
+	font-size: 12px;
+	font-weight: 500;
+	letter-spacing: 0.03em;
+	color: rgba(255, 255, 255, 0.85);
+}
+
+.namu-infobox td,
+.namu-infobox th {
+	border: 1px solid var(--namu-border-soft);
+	padding: 5px 8px;
+	vertical-align: top;
+}
+
+.namu-infobox-photo {
+	background: #fff;
+	text-align: center;
+	padding: 8px !important;
+}
+
+.namu-infobox-photo-frame {
+	position: relative;
+	width: 100%;
+	aspect-ratio: 1 / 1;
+	overflow: hidden;
+	background: #eee;
+}
+
+.namu-infobox-photo-frame img {
+	object-fit: cover;
+}
+
+.namu-infobox-caption {
+	display: block;
+	margin-top: 6px;
+	font-size: 12px;
+	color: #666;
+}
+
+.namu-infobox-label {
+	width: 88px;
+	background: #ececec;
+	font-weight: 500;
+	color: #333;
+}
+
+.namu-infobox-header td {
+	background: var(--namu-brand);
+	color: #fff;
+	font-weight: 700;
+	text-align: center;
+	padding: 4px 6px;
+}
+
+/* ── toc ────────────────────────────────────────── */
+.namu-toc {
+	display: table;
+	border: 1px solid var(--namu-border);
+	background: var(--namu-toc);
+	padding: 10px 18px 12px;
+	margin: 8px 0 18px;
+	clear: left;
+}
+
+.namu-toc-title {
+	font-weight: 700;
+	margin-bottom: 4px;
+}
+
+.namu-toc-toggle {
+	border: 0;
+	background: none;
+	color: var(--namu-link);
+	font: inherit;
+	font-size: 13px;
+	cursor: pointer;
+	padding: 0;
+}
+
+.namu-toc-toggle:hover {
+	text-decoration: underline;
+}
+
+.namu-toc ol {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.namu-toc li {
+	margin: 1px 0;
+}
+
+.namu-toc a {
+	color: var(--namu-link);
+	text-decoration: none;
+}
+
+.namu-toc a:hover {
+	text-decoration: underline;
+}
+
+/* ── content ────────────────────────────────────── */
+.namu-heading {
+	margin: 1.4em 0 0.45em;
+	padding-bottom: 4px;
+	border-bottom: 1px solid var(--namu-border);
+	font-size: 1.6rem;
+	font-weight: 700;
+	line-height: 1.35;
+	color: #111;
+}
+
+.namu-heading-num {
+	color: inherit;
+	text-decoration: none;
+	margin-right: 6px;
+}
+
+.namu-heading-num:hover {
+	text-decoration: underline;
+}
+
+.namu-subheading {
+	margin: 1.1em 0 0.35em;
+	padding-bottom: 3px;
+	border-bottom: 1px solid #ddd;
+	font-size: 1.2rem;
+	font-weight: 700;
+	line-height: 1.35;
+	color: #111;
+}
+
+.namu-edit {
+	float: right;
+	font-size: 13px;
+	font-weight: 400;
+	color: #888;
+	text-decoration: none;
+	cursor: default;
+	margin-top: 8px;
+}
+
+.namu-p {
+	margin: 0.7em 0;
+}
+
+.namu-file {
+	float: right;
+	width: 148px;
+	margin: 0.15em 0 0.7em 1em;
+	padding: 6px;
+	border: 1px solid var(--namu-border);
+	background: #fff;
+	text-align: center;
+}
+
+.namu-file.is-wide {
+	width: 260px;
+}
+
+.namu-file-compare {
+	float: right;
+	display: flex;
+	gap: 6px;
+	width: 308px;
+	margin: 0.15em 0 0.7em 1em;
+}
+
+.namu-file-compare .namu-file {
+	float: none;
+	width: calc(50% - 3px);
+	margin: 0;
+}
+
+.namu-file img {
+	display: block;
+	width: 100%;
+	height: auto;
+	background: #fff;
+}
+
+.namu-file-compare img {
+	aspect-ratio: 1;
+	object-fit: cover;
+	object-position: center;
+}
+
+.namu-file figcaption {
+	margin-top: 4px;
+	font-size: 12px;
+	line-height: 1.4;
+	color: var(--namu-muted);
+}
+
+.namu-subheading,
+.namu-heading,
+.namu-footnotes {
+	clear: both;
+}
+
+.namu-list {
+	margin: 0.5em 0 0.7em;
+	padding-left: 1.4em;
+	list-style: disc;
+}
+
+.namu-list li {
+	margin: 0.35em 0;
+	padding-left: 0.15em;
+	list-style: disc;
+}
+
+.namu-link {
+	color: var(--namu-link);
+	text-decoration: none;
+}
+
+.namu-link:hover {
+	text-decoration: underline;
+}
+
+.namu-link-ext::after {
+	content: " \2197";
+	font-size: 11px;
+}
+
+.namu-fn {
+	position: relative;
+	font-size: 11px;
+	line-height: 0;
+}
+
+.namu-fn a {
+	position: relative;
+	color: var(--namu-link);
+	text-decoration: none;
+}
+
+.namu-fn a:hover {
+	text-decoration: underline;
+}
+
+.namu-fn-tip {
+	visibility: hidden;
+	opacity: 0;
+	pointer-events: none;
+	position: absolute;
+	left: 50%;
+	bottom: calc(100% + 8px);
+	transform: translateX(-50%);
+	z-index: 50;
+	width: max-content;
+	max-width: min(280px, 70vw);
+	padding: 8px 10px;
+	border: 1px solid #c8c8c8;
+	border-radius: 2px;
+	background: #fff;
+	box-shadow: 0 2px 10px rgba(0, 0, 0, 0.16);
+	color: #373a3c;
+	font-size: 13px;
+	font-weight: 400;
+	line-height: 1.45;
+	text-align: left;
+	white-space: normal;
+	text-decoration: none;
+}
+
+.namu-fn:hover .namu-fn-tip,
+.namu-fn:focus-within .namu-fn-tip {
+	visibility: visible;
+	opacity: 1;
+}
+
+.namu-footnotes {
+	clear: both;
+	margin-top: 28px;
+	padding-top: 8px;
+	border-top: 1px solid var(--namu-border);
+	font-size: 13px;
+}
+
+.namu-footnotes-title {
+	font-weight: 700;
+	margin-bottom: 6px;
+}
+
+.namu-footnotes ol {
+	margin: 0;
+	padding-left: 1.4em;
+}
+
+.namu-footnotes li {
+	margin: 2px 0;
+}
+
+.namu-footer {
+	max-width: 1100px;
+	margin: 0 auto;
+	padding: 0 16px 32px;
+	font-size: 12px;
+	color: #888;
+}
+
+.namu-search-miss {
+	margin: 8px 0 0;
+	font-size: 13px;
+	color: #c0392b;
+}
+
+@media (max-width: 720px) {
+	.namu-top-links .namu-top-link:not(.is-button) {
+		display: none;
+	}
+
+	.namu-top-link.is-button {
+		padding: 6px 4px;
+		font-size: 0;
+		gap: 0;
+	}
+
+	.namu-top-link.is-button .namu-caret {
+		display: none;
+	}
+
+	.namu-article {
+		padding: 14px 12px 28px;
+	}
+
+	.namu-title {
+		font-size: 1.55rem;
+	}
+
+	.namu-infobox {
+		float: none;
+		width: 100%;
+		max-width: 320px;
+		margin: 0 auto 16px;
+	}
+
+	.namu-heading {
+		font-size: 1.3rem;
+	}
+
+	.namu-toc {
+		display: block;
+		width: 100%;
+	}
+
+	.namu-file,
+	.namu-file-compare {
+		float: none;
+		margin: 0.4em auto 0.8em;
+		max-width: 100%;
+	}
+
+	.namu-file-compare {
+		width: min(308px, 100%);
+	}
+}

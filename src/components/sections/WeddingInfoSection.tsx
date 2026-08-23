@@ -42,12 +42,14 @@ export default function WeddingInfoSection({ config }: { config: WeddingConfig }
 			</AnimateOnScroll>
 
 			<AnimateOnScroll delay={300}>
-				<div className="bg-warm-white rounded-xl p-4 border border-beige/50 mb-4">
-					<div className="flex items-center justify-between">
-						<p className="text-xs text-brown flex-1">{config.venue.address}</p>
-						<CopyButton text={config.venue.address} label={config.labels.copyAddress} />
+				<div className="bg-warm-white rounded-xl px-3.5 py-2.5 border border-beige/50 mb-4">
+					<div className="flex items-start justify-between gap-2">
+						<div className="min-w-0 flex-1 text-[13px] leading-tight">
+							<p className="text-brown">{config.venue.address}</p>
+							{config.venue.tel && <p className="text-warm-gray">Tel. {config.venue.tel}</p>}
+						</div>
+						<CopyButton text={config.venue.address} label={config.labels.copyAddress} className="text-[13px] shrink-0" />
 					</div>
-					{config.venue.tel && <p className="text-xs text-warm-gray mt-1">Tel. {config.venue.tel}</p>}
 				</div>
 			</AnimateOnScroll>
 
@@ -59,7 +61,7 @@ export default function WeddingInfoSection({ config }: { config: WeddingConfig }
 							href={link.url}
 							target="_blank"
 							rel="noopener noreferrer"
-							className="flex items-center justify-center py-3 px-2 bg-warm-white border border-beige/50 rounded-xl text-xs text-brown-dark hover:bg-sage-50 transition-colors"
+							className="flex items-center justify-center py-3 px-2 bg-warm-white border border-beige/50 rounded-xl text-[13px] text-brown-dark hover:bg-sage-50 transition-colors"
 						>
 							<span className="mr-1">📍</span>
 							{link.name}
