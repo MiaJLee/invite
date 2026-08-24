@@ -19,7 +19,6 @@ import ShareSection from '@/components/sections/ShareSection'
 import SectionDivider from '@/components/ui/SectionDivider'
 import ScrollIndicator from '@/components/ui/ScrollIndicator'
 import ScrollToTopButton from '@/components/ui/ScrollToTopButton'
-import HiddenGameHeartEasterEggs from '@/components/ui/HiddenGameHeartEasterEggs'
 
 function ContentSections({ config }: { config: WeddingConfig }) {
 	return (
@@ -99,7 +98,6 @@ export default function WeddingContent({ config }: { config: WeddingConfig }) {
 				<div className="relative">
 					<ScrollIndicator labels={config.labels.nav} hiddenSections={hiddenSections} />
 					<ContentSections config={config} />
-					<HiddenGameHeartEasterEggs locale={config.labels.locale} />
 				</div>
 				<ScrollToTopButton />
 			</main>
@@ -122,7 +120,6 @@ export default function WeddingContent({ config }: { config: WeddingConfig }) {
 						<div className="max-w-[520px] mx-auto">
 							<ContentSections config={config} />
 						</div>
-						<HiddenGameHeartEasterEggs locale={config.labels.locale} />
 					</div>
 					<ScrollToTopButton scrollContainerId="scroll-content" />
 				</div>
