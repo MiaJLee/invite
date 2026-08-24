@@ -27,6 +27,23 @@ export const labelsEn: Labels = {
 
 	galleryTitle: 'Our Moments',
 
+	faqTitle: 'FAQ',
+	faqSubtitle: 'Frequently asked questions',
+	faqItems: [
+		{
+			question: 'Where will you honeymoon?',
+			answer: "We'll travel southern Spain and Portugal for two weeks!",
+		},
+		{
+			question: 'Where will you live?',
+			answer: "We're starting out in Bundang, close to both of our workplaces.",
+		},
+		{
+			question: 'Are you happy?',
+			answer: "Yes, we're so so happy!! ^0^",
+		},
+	],
+
 	transportTitle: 'Directions',
 
 	accountTitle: 'Gift Registry',
@@ -79,6 +96,7 @@ export const labelsEn: Labels = {
 		aboutUs: 'About',
 		calendar: 'Calendar',
 		gallery: 'Gallery',
+		faq: 'FAQ',
 		transport: 'Directions',
 		account: 'Gifts',
 		guestbook: 'Guestbook',

@@ -9,6 +9,7 @@ import WeddingInfoSection from '@/components/sections/WeddingInfoSection'
 import AboutUsSection from '@/components/sections/AboutUsSection'
 import CalendarSection from '@/components/sections/CalendarSection'
 import GallerySection from '@/components/sections/GallerySection'
+import FaqSection from '@/components/sections/FaqSection'
 import TransportSection from '@/components/sections/TransportSection'
 import AccountSection from '@/components/sections/AccountSection'
 import GuestbookSection from '@/components/sections/GuestbookSection'
@@ -32,6 +33,8 @@ function ContentSections({ config }: { config: WeddingConfig }) {
 			<CalendarSection config={config} />
 			<SectionDivider />
 			<GallerySection config={config} />
+			<SectionDivider />
+			<FaqSection config={config} />
 			<SectionDivider />
 			<TransportSection config={config} />
       {config.showAccount !== false && (

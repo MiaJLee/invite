@@ -27,6 +27,23 @@ export const labelsKo: Labels = {
 
 	galleryTitle: '우리의 순간',
 
+	faqTitle: 'FAQ',
+	faqSubtitle: '자주 묻는 질문',
+	faqItems: [
+		{
+			question: '신혼여행은 어디로 가나요?',
+			answer: '2주간 스페인 남부와 포르투갈을 여행하고 올 예정입니다!',
+		},
+		{
+			question: '신혼집은 어디로 잡았나요?',
+			answer: '둘의 직장이 가까운 분당에서 시작하게 되었습니다.',
+		},
+		{
+			question: '행복하신가요?',
+			answer: '예 너무너무 행복합니다!! ^0^',
+		},
+	],
+
 	transportTitle: '오시는 길',
 
 	accountTitle: '마음 전하실 곳',
@@ -79,6 +96,7 @@ export const labelsKo: Labels = {
 		aboutUs: '소개',
 		calendar: '캘린더',
 		gallery: '갤러리',
+		faq: 'FAQ',
 		transport: '오시는길',
 		account: '축의금',
 		guestbook: '방명록',

@@ -115,6 +115,11 @@ export interface Labels {
 	// 갤러리
 	galleryTitle: string
 
+	// FAQ
+	faqTitle: string
+	faqSubtitle: string
+	faqItems: { question: string; answer: string }[]
+
 	// 오시는 길
 	transportTitle: string
 
@@ -173,6 +178,7 @@ export interface Labels {
 		aboutUs: string
 		calendar: string
 		gallery: string
+		faq: string
 		transport: string
 		account: string
 		guestbook: string
