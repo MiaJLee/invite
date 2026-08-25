@@ -355,7 +355,17 @@ export default function PersonWikiPage({ wiki }: { wiki: PersonWiki }) {
 			</div>
 
 			<footer className="namu-footer">
-				이 문서는 청첩장용 비공식 패러디이며, namu.wiki 및 umanle S.R.L.과 무관합니다.
+				<p>이 문서는 청첩장용 비공식 패러디이며, namu.wiki 및 umanle S.R.L.과 무관합니다.</p>
+				<p className="namu-footer-credit">
+					나무위키 로고 ©{' '}
+					<a href="https://namu.wiki/w/%EB%82%98%EB%AC%B4%EC%9C%84%ED%82%A4:%EC%83%81%EC%A7%95" target="_blank" rel="noreferrer">
+						kein
+					</a>
+					,{' '}
+					<a href="https://creativecommons.org/licenses/by-nc-sa/2.0/kr/" target="_blank" rel="noreferrer">
+						CC BY-NC-SA 2.0 KR
+					</a>
+				</p>
 			</footer>
 		</div>
 	)
