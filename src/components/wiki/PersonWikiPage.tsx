@@ -42,6 +42,15 @@ function IconToolbox() {
 	)
 }
 
+function IconInvitation() {
+	return (
+		<svg viewBox="0 0 20 20" aria-hidden="true">
+			<rect x="3.5" y="5.5" width="13" height="9" rx="1" fill="none" stroke="currentColor" strokeWidth="1.5" />
+			<path d="M3.5 7.2 10 11.2l6.5-4" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+		</svg>
+	)
+}
+
 function IconShuffle() {
 	return (
 		<svg viewBox="0 0 20 20" aria-hidden="true">
@@ -214,6 +223,10 @@ export default function PersonWikiPage({ wiki }: { wiki: PersonWiki }) {
 									</div>
 								)}
 							</div>
+							<Link href="/" className="namu-top-link is-nav-link">
+								<IconInvitation />
+								청첩장보기
+							</Link>
 						</nav>
 						<div className="namu-top-tools">
 							<button

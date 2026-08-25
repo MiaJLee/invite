@@ -115,6 +115,11 @@ html:has(.namu-root) body {
 	line-height: inherit;
 }
 
+.namu-top-link.is-nav-link {
+	cursor: pointer;
+	text-decoration: none;
+}
+
 .namu-top-link svg {
 	width: 18px;
 	height: 18px;
@@ -737,11 +742,12 @@ html:has(.namu-root) body {
 }
 
 @media (max-width: 720px) {
-	.namu-top-links .namu-top-link:not(.is-button) {
+	.namu-top-links .namu-top-link:not(.is-button):not(.is-nav-link) {
 		display: none;
 	}
 
-	.namu-top-link.is-button {
+	.namu-top-link.is-button,
+	.namu-top-link.is-nav-link {
 		padding: 6px 4px;
 		font-size: 0;
 		gap: 0;
