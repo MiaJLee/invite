@@ -1,34 +1,14 @@
 'use client'
 
-import { FormEvent, useMemo, useState } from 'react'
+import { FormEvent, useEffect, useMemo, useState } from 'react'
 import { useRouter } from 'next/navigation'
 import Link from 'next/link'
 import type { PersonWiki, WikiSlug } from '@/types'
 import ImageWithFallback from '@/components/ui/ImageWithFallback'
 import { withBasePath } from '@/config/basePath'
 import { WikiInline, WikiText, type WikiFootnote } from './WikiText'
+import NamuLogo from './NamuLogo'
 import './namu.css'
-
-function NamuLogoMark() {
-	return (
-		<svg className="namu-logo-mark" viewBox="0 0 28 28" aria-hidden="true">
-			<g fill="#fff" stroke="#fff" strokeWidth="1.35">
-				<line x1="14" y1="6.2" x2="8.2" y2="12.2" />
-				<line x1="14" y1="6.2" x2="19.8" y2="12.2" />
-				<line x1="8.2" y1="13.6" x2="5" y2="20.4" />
-				<line x1="8.2" y1="13.6" x2="14" y2="20.4" />
-				<line x1="19.8" y1="13.6" x2="14" y2="20.4" />
-				<line x1="19.8" y1="13.6" x2="23" y2="20.4" />
-			</g>
-			<circle cx="14" cy="5" r="2.15" fill="#fff" />
-			<circle cx="8.2" cy="12.8" r="2.15" fill="#fff" />
-			<circle cx="19.8" cy="12.8" r="2.15" fill="#fff" />
-			<circle cx="5" cy="21.4" r="2.15" fill="#fff" />
-			<circle cx="14" cy="21.4" r="2.15" fill="#fff" />
-			<circle cx="23" cy="21.4" r="2.15" fill="#fff" />
-		</svg>
-	)
-}
 
 function IconClock() {
 	return (
@@ -151,6 +131,10 @@ export default function PersonWikiPage({ wiki }: { wiki: PersonWiki }) {
 		return offsets
 	}, [wiki])
 
+	useEffect(() => {
+		document.title = `${wiki.title} - 나무위키`
+	}, [wiki.title])
+
 	function onSearch(e: FormEvent) {
 		e.preventDefault()
 		const q = query.trim()
@@ -173,9 +157,12 @@ export default function PersonWikiPage({ wiki }: { wiki: PersonWiki }) {
 			<header className="namu-header">
 				<div className="namu-topbar">
 					<div className="namu-topbar-inner">
-						<Link href={wiki.slug === 'groom' ? '/groom' : '/bride'} className="namu-logo">
-							<NamuLogoMark />
-							<span>나무위키</span>
+						<Link
+							href={wiki.slug === 'groom' ? '/groom' : '/bride'}
+							className="namu-logo"
+							aria-label="나무위키"
+						>
+							<NamuLogo />
 						</Link>
 						<nav className="namu-top-links" aria-label="위키 메뉴">
 							<span className="namu-top-link">

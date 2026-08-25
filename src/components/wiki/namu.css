@@ -67,12 +67,9 @@ html:has(.namu-root) body {
 .namu-logo {
 	display: inline-flex;
 	align-items: center;
-	gap: 8px;
+	gap: 7px;
 	color: #fff;
 	text-decoration: none;
-	font-weight: 700;
-	font-size: 18px;
-	letter-spacing: -0.03em;
 	flex-shrink: 0;
 	line-height: 1;
 }
@@ -83,9 +80,37 @@ html:has(.namu-root) body {
 }
 
 .namu-logo-mark {
-	width: 28px;
-	height: 28px;
+	width: 26px;
+	height: 26px;
 	display: block;
+	flex-shrink: 0;
+}
+
+.namu-logo-wordmark {
+	display: inline-flex;
+	align-items: flex-end;
+	font-family: var(--namu-font);
+	font-size: 21px;
+	font-weight: 900;
+	letter-spacing: -0.07em;
+	line-height: 1;
+	padding-top: 2px;
+}
+
+.namu-logo-node {
+	position: relative;
+	display: inline-block;
+}
+
+.namu-logo-dot {
+	position: absolute;
+	top: -2px;
+	width: 5px;
+	height: 5px;
+	background: #fff;
+	border-radius: 50%;
+	transform: translateX(-50%);
+	pointer-events: none;
 }
 
 .namu-top-links {
