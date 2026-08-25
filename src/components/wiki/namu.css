@@ -696,36 +696,44 @@ html:has(.namu-root) body {
 
 .namu-scroll-nav {
 	position: fixed;
-	right: 16px;
-	top: 50%;
-	transform: translateY(-50%);
+	right: 20px;
+	bottom: 24px;
 	display: flex;
 	flex-direction: column;
 	z-index: 25;
-	box-shadow: 0 1px 4px rgba(0, 0, 0, 0.12);
+	overflow: hidden;
+	border: 1px solid #d4d4d4;
+	border-radius: 8px;
+	background: #fff;
+	box-shadow: 0 1px 6px rgba(0, 0, 0, 0.1);
 }
 
 .namu-scroll-btn {
-	width: 42px;
-	padding: 7px 4px;
-	border: 1px solid #bbb;
-	background: rgba(255, 255, 255, 0.96);
-	color: #666;
-	font: inherit;
-	font-size: 10px;
-	font-weight: 700;
-	line-height: 1.15;
-	letter-spacing: 0.02em;
+	width: 40px;
+	height: 36px;
+	padding: 0;
+	border: 0;
+	background: #fff;
+	color: #555;
 	cursor: pointer;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
 }
 
 .namu-scroll-btn + .namu-scroll-btn {
-	border-top: 0;
+	border-top: 1px solid #e8e8e8;
 }
 
 .namu-scroll-btn:hover {
-	background: #fff;
-	color: #00a69c;
+	background: #f7f7f7;
+	color: #333;
+}
+
+.namu-scroll-btn svg {
+	width: 18px;
+	height: 18px;
+	display: block;
 }
 
 @media (max-width: 720px) {
@@ -757,13 +765,18 @@ html:has(.namu-root) body {
 	}
 
 	.namu-scroll-nav {
-		right: 8px;
+		right: 12px;
+		bottom: 16px;
 	}
 
 	.namu-scroll-btn {
 		width: 36px;
-		padding: 6px 3px;
-		font-size: 9px;
+		height: 32px;
+	}
+
+	.namu-scroll-btn svg {
+		width: 16px;
+		height: 16px;
 	}
 
 	.namu-article {

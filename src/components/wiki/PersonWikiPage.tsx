@@ -93,6 +93,22 @@ function IconUser() {
 	)
 }
 
+function IconArrowUp() {
+	return (
+		<svg viewBox="0 0 20 20" aria-hidden="true">
+			<path d="M5.5 12.5 10 7.5 14.5 12.5" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
+		</svg>
+	)
+}
+
+function IconArrowDown() {
+	return (
+		<svg viewBox="0 0 20 20" aria-hidden="true">
+			<path d="M5.5 7.5 10 12.5 14.5 7.5" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
+		</svg>
+	)
+}
+
 function ArticleTools() {
 	return (
 		<div className="namu-article-tools" aria-hidden="true">
@@ -373,7 +389,7 @@ export default function PersonWikiPage({ wiki }: { wiki: PersonWiki }) {
 					onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
 					aria-label="맨 위로"
 				>
-					TOP
+					<IconArrowUp />
 				</button>
 				<button
 					type="button"
@@ -386,7 +402,7 @@ export default function PersonWikiPage({ wiki }: { wiki: PersonWiki }) {
 					}
 					aria-label="맨 아래로"
 				>
-					BOTTOM
+					<IconArrowDown />
 				</button>
 			</nav>
 		</div>
