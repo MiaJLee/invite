@@ -6,8 +6,8 @@ export default function NamuLogo() {
 			src={withBasePath('/images/wiki/namuwiki-logo-white.png')}
 			alt="나무위키"
 			className="namu-logo-image"
-			width={120}
-			height={40}
+			width={152}
+			height={38}
 		/>
 	)
 }

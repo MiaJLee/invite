@@ -365,6 +365,30 @@ export default function PersonWikiPage({ wiki }: { wiki: PersonWiki }) {
 					</a>
 				</p>
 			</footer>
+
+			<nav className="namu-scroll-nav" aria-label="페이지 이동">
+				<button
+					type="button"
+					className="namu-scroll-btn"
+					onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+					aria-label="맨 위로"
+				>
+					TOP
+				</button>
+				<button
+					type="button"
+					className="namu-scroll-btn"
+					onClick={() =>
+						window.scrollTo({
+							top: document.documentElement.scrollHeight,
+							behavior: 'smooth',
+						})
+					}
+					aria-label="맨 아래로"
+				>
+					BOTTOM
+				</button>
+			</nav>
 		</div>
 	)
 }

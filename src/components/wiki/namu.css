@@ -51,14 +51,14 @@ html:has(.namu-root) body {
 .namu-topbar {
 	background: #00a69c;
 	color: #fff;
-	height: 56px;
+	height: 60px;
 }
 
 .namu-topbar-inner {
 	display: flex;
 	align-items: center;
 	gap: 12px;
-	height: 56px;
+	height: 60px;
 	padding: 0 16px;
 	max-width: 1280px;
 	margin: 0 auto;
@@ -80,7 +80,7 @@ html:has(.namu-root) body {
 }
 
 .namu-logo-image {
-	height: 30px;
+	height: 38px;
 	width: auto;
 	display: block;
 }
@@ -691,6 +691,40 @@ html:has(.namu-root) body {
 	color: #c0392b;
 }
 
+.namu-scroll-nav {
+	position: fixed;
+	right: 16px;
+	top: 50%;
+	transform: translateY(-50%);
+	display: flex;
+	flex-direction: column;
+	z-index: 25;
+	box-shadow: 0 1px 4px rgba(0, 0, 0, 0.12);
+}
+
+.namu-scroll-btn {
+	width: 42px;
+	padding: 7px 4px;
+	border: 1px solid #bbb;
+	background: rgba(255, 255, 255, 0.96);
+	color: #666;
+	font: inherit;
+	font-size: 10px;
+	font-weight: 700;
+	line-height: 1.15;
+	letter-spacing: 0.02em;
+	cursor: pointer;
+}
+
+.namu-scroll-btn + .namu-scroll-btn {
+	border-top: 0;
+}
+
+.namu-scroll-btn:hover {
+	background: #fff;
+	color: #00a69c;
+}
+
 @media (max-width: 720px) {
 	.namu-top-links .namu-top-link:not(.is-button) {
 		display: none;
@@ -717,6 +751,16 @@ html:has(.namu-root) body {
 
 	.namu-icon-btn:nth-last-child(-n + 2) {
 		display: none;
+	}
+
+	.namu-scroll-nav {
+		right: 8px;
+	}
+
+	.namu-scroll-btn {
+		width: 36px;
+		padding: 6px 3px;
+		font-size: 9px;
 	}
 
 	.namu-article {
