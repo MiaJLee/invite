@@ -1,11 +1,8 @@
-import type { Metadata } from 'next'
 import PersonWikiPage from '@/components/wiki/PersonWikiPage'
 import { weddingConfig } from '@/config/wedding'
+import { createWikiMetadata } from '@/lib/wikiMetadata'
 
-export const metadata: Metadata = {
-	title: `${weddingConfig.bride.name} - 나무위키`,
-	description: `${weddingConfig.bride.name}에 대한 인물 문서`,
-}
+export const metadata = createWikiMetadata(weddingConfig.wiki!.bride)
 
 export default function BridePage() {
 	const wiki = weddingConfig.wiki?.bride
