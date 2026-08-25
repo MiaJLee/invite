@@ -35,7 +35,7 @@ export const labelsKo: Labels = {
 			answer: '2주간 스페인 남부와 포르투갈을 여행하고 올 예정입니다!',
 		},
 		{
-			question: '신혼집은 어디로 잡았나요?',
+			question: '신혼집은 어디서 시작하나요?',
 			answer: '둘의 직장이 가까운 분당에서 시작하게 되었습니다.',
 		},
 		{
