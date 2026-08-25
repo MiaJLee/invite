@@ -199,7 +199,34 @@ export default function PersonWikiPage({ wiki }: { wiki: PersonWiki }) {
 								)}
 							</div>
 						</nav>
-						<div className="namu-top-end">
+						<div className="namu-top-tools">
+							<button
+								type="button"
+								className="namu-random-btn"
+								title="아무 문서로 이동"
+								aria-label="아무 문서로 이동"
+								onClick={() => router.push(`/${otherSlug}`)}
+							>
+								<IconShuffle />
+							</button>
+							<form className="namu-search" onSubmit={onSearch}>
+								<input
+									type="search"
+									value={query}
+									onChange={(e) => {
+										setQuery(e.target.value)
+										setMiss('')
+									}}
+									placeholder="여기에서 검색"
+									aria-label="여기에서 검색"
+								/>
+								<button type="submit" className="namu-search-icon" title="검색" aria-label="검색">
+									<IconSearch />
+								</button>
+								<button type="submit" className="namu-search-icon" title="이동" aria-label="이동">
+									<IconGo />
+								</button>
+							</form>
 							<span className="namu-icon-btn" aria-hidden="true">
 								<IconBell />
 							</span>
@@ -208,35 +235,6 @@ export default function PersonWikiPage({ wiki }: { wiki: PersonWiki }) {
 							</span>
 						</div>
 					</div>
-				</div>
-				<div className="namu-searchbar">
-					<button
-						type="button"
-						className="namu-random-btn"
-						title="아무 문서로 이동"
-						aria-label="아무 문서로 이동"
-						onClick={() => router.push(`/${otherSlug}`)}
-					>
-						<IconShuffle />
-					</button>
-					<form className="namu-search" onSubmit={onSearch}>
-						<input
-							type="search"
-							value={query}
-							onChange={(e) => {
-								setQuery(e.target.value)
-								setMiss('')
-							}}
-							placeholder="여기에서 검색"
-							aria-label="여기에서 검색"
-						/>
-						<button type="submit" className="namu-search-icon" title="검색" aria-label="검색">
-							<IconSearch />
-						</button>
-						<button type="submit" className="namu-search-icon" title="이동" aria-label="이동">
-							<IconGo />
-						</button>
-					</form>
 				</div>
 			</header>
 

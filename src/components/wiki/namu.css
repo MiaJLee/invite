@@ -51,15 +51,15 @@ html:has(.namu-root) body {
 .namu-topbar {
 	background: #00a69c;
 	color: #fff;
-	height: 48px;
+	height: 56px;
 }
 
 .namu-topbar-inner {
 	display: flex;
 	align-items: center;
-	gap: 16px;
-	height: 48px;
-	padding: 8px 16px;
+	gap: 12px;
+	height: 56px;
+	padding: 0 16px;
 	max-width: 1280px;
 	margin: 0 auto;
 }
@@ -80,7 +80,7 @@ html:has(.namu-root) body {
 }
 
 .namu-logo-image {
-	height: 26px;
+	height: 30px;
 	width: auto;
 	display: block;
 }
@@ -88,8 +88,9 @@ html:has(.namu-root) body {
 .namu-top-links {
 	display: flex;
 	align-items: center;
-	gap: 4px;
+	gap: 2px;
 	min-width: 0;
+	flex: 1;
 }
 
 .namu-top-link {
@@ -151,20 +152,22 @@ html:has(.namu-root) body {
 	background: #f3f6fa;
 }
 
-.namu-top-end {
+.namu-top-tools {
 	display: flex;
 	align-items: center;
-	gap: 4px;
+	gap: 8px;
 	margin-left: auto;
+	flex-shrink: 0;
 }
 
 .namu-icon-btn {
 	display: inline-flex;
 	align-items: center;
 	justify-content: center;
-	width: 32px;
-	height: 32px;
+	width: 34px;
+	height: 34px;
 	color: #fff;
+	flex-shrink: 0;
 }
 
 .namu-icon-btn svg {
@@ -172,18 +175,11 @@ html:has(.namu-root) body {
 	height: 20px;
 }
 
-.namu-searchbar {
-	display: flex;
-	align-items: stretch;
-	background: #fff;
-	border-bottom: 1px solid #ccc;
-	height: 40px;
-}
-
 .namu-random-btn {
-	width: 40px;
+	width: 36px;
+	height: 36px;
 	border: 0;
-	background: transparent;
+	background: #fff;
 	color: #555;
 	cursor: pointer;
 	display: inline-flex;
@@ -202,11 +198,13 @@ html:has(.namu-root) body {
 }
 
 .namu-search {
-	flex: 1;
 	display: flex;
 	align-items: stretch;
-	min-width: 0;
+	width: min(300px, 34vw);
+	min-width: 160px;
+	height: 36px;
 	background: #fff;
+	flex-shrink: 1;
 }
 
 .namu-search input {
@@ -215,7 +213,7 @@ html:has(.namu-root) body {
 	border: 0;
 	padding: 0 0 0 12px;
 	font: inherit;
-	font-size: 15px;
+	font-size: 14px;
 	color: #212529;
 	outline: none;
 	background: transparent;
@@ -705,6 +703,19 @@ html:has(.namu-root) body {
 	}
 
 	.namu-top-link.is-button .namu-caret {
+		display: none;
+	}
+
+	.namu-top-tools {
+		gap: 6px;
+	}
+
+	.namu-search {
+		width: min(180px, 38vw);
+		min-width: 120px;
+	}
+
+	.namu-icon-btn:nth-last-child(-n + 2) {
 		display: none;
 	}
 
