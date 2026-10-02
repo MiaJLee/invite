@@ -42,7 +42,9 @@ function ContentSections({ config }: { config: WeddingConfig }) {
           <AccountSection config={config} />
         </>
       )}
-      {config.showFlowerDecline !== false && <FlowerDeclineSection config={config} />}
+      {config.showFlowerDecline === true && config.flowerDeclineMessage && (
+        <FlowerDeclineSection config={config} />
+      )}
       {config.showGuestbook !== false && !!config.guestbookScriptUrl && (
         <>
           <SectionDivider />

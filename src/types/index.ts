@@ -208,7 +208,7 @@ export interface WeddingConfig {
 	navigationLinks: NavigationLink[]
 
 	greeting: string
-	flowerDeclineMessage: string
+	flowerDeclineMessage?: string
 
 	gallery: GalleryImage[]
 	transport: TransportInfo[]

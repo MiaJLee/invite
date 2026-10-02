@@ -58,9 +58,6 @@ and no cancellation policy.
 We would be honored to celebrate
 the beginning of forever with you.`,
 
-	flowerDeclineMessage:
-		'Your warm wishes are the greatest gift.\nIn lieu of flowers, please share your heartfelt congratulations.',
-
 	transport: [
 		{
 			type: 'metro',

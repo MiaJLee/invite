@@ -68,9 +68,6 @@ export const weddingConfig: WeddingConfig = {
 
 저희의 새로운 시작을 축복해 주세요.`,
 
-	// ── 화환 사양 ──────────────────────────────────
-	flowerDeclineMessage: '축하 화환은 정중히 사양합니다.\n축하의 마음만 감사히 받겠습니다.',
-
 	// ── 갤러리 ──────────────────────────────────────
 	gallery: [
 		{ src: '/images/gallery/gallery_01.jpg', alt: '웨딩 사진 1' },
@@ -185,6 +182,8 @@ export const weddingConfig: WeddingConfig = {
 	// 비워두면 방명록 섹션이 자동으로 숨겨집니다.
 	guestbookScriptUrl:
 		'https://script.google.com/macros/s/AKfycbwMAcSowkH0U-M6_k9z8rPIfeAWR5_pSBW35hcNi_kahhIPtz3VIQUYrtNoF1Ezpjxu/exec',
+
+	showFlowerDecline: false,
 
 	// ── 공유 설정 ──────────────────────────────────
 	ogImage: '/images/main-og.jpg',
